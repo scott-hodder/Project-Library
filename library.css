@@ -1,8 +1,18 @@
+:root {
+  --main-color: #e1b282;
+  --second-color: #2d545e;
+  --third-color: #12343b;
+}
+
 body {
-  background-color: beige;
-  color: brown;
+  background-color: var(--main-color);
+  color: var(--second-color);
   display: grid;
   gap: 20px;
+}
+
+.header {
+  text-align: center;
 }
 
 .topContainer {
@@ -12,15 +22,163 @@ body {
 
 .form {
   height: 1fr;
-  border: blue solid 1px;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 25px;
 }
 .books {
-  border: solid red 1px;
   height: 1fr;
   text-align: center;
 }
 .card {
-  border: 1px solid green;
-  margin-top: 20px;
-  background-color: white;
+  margin-top: 30px;
+  background-color: #f4eee1;
+  width: 100%;
+  border-radius: 25px;
+  font-size: larger;
+  box-shadow: 6px 6px 29px -4px rgba(0, 0, 0, 0.75);
+}
+
+.books {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.buttonDiv {
+  display: flex;
+  justify-content: center;
+}
+
+#add-book-button {
+  background: var(--main-color);
+  padding: 10px 15px;
+  color: var(--second-color);
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: 6px 6px 29px -4px rgba(0, 0, 0, 0.75);
+  margin-top: 25px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+#add-book-button:hover {
+  background: var(--third-color);
+  color: white;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 40px;
+  color: var(--third-color);
+  font-weight: bolder;
+}
+.popup {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  height: 250px;
+  width: 500px;
+  background: var(--main-color);
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+}
+
+input {
+  margin: 10px auto;
+  display: block;
+  width: 50%;
+  padding: 8px;
+  border: 1px solid gray;
+  text-align: center;
+  color: var(--second-color);
+  font-weight: bolder;
+}
+
+.submit-button {
+  background: #fff;
+  padding: 5px 8px;
+  color: var(--main-color);
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: 6px 6px 29px -4px rgba(0, 0, 0, 0.75);
+  margin-top: 25px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+.reset-button {
+  background: #fff;
+  padding: 5px 8px;
+  color: var(--main-color);
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: 6px 6px 29px -4px rgba(0, 0, 0, 0.75);
+  margin-top: 25px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.close-button {
+  background: #fff;
+  padding: 5px 8px;
+  color: var(--main-color);
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: 6px 6px 29px -4px rgba(0, 0, 0, 0.75);
+  margin-top: 25px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.submit-button:hover {
+  background: var(--main-color);
+  color: var(--second-color);
+}
+
+.reset-button:hover {
+  background: var(--main-color);
+  color: var(--second-color);
+}
+
+.close-button:hover {
+  background: var(--main-color);
+  color: var(--second-color);
+}
+.remove-book-button {
+  background: #fff;
+  color: var(--third-color);
+  margin: 5px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 14px;
+  border-radius: 5px;
+  box-shadow: 6px 6px 29px -4px rgba(0, 0, 0, 0.75);
+  margin-top: 25px;
+  text-decoration: none;
+  transition: 0.4s;
+  float: left;
+  margin-left: 15px;
+}
+
+.remove-book-button:hover {
+  background: var(--main-color);
+  color: var(--second-color);
 }
