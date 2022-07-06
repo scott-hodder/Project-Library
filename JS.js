@@ -85,7 +85,7 @@ function clearForm() {
 }
 
 addBookToLibrary("The Hobbit", " J.R.R. Tolkien", "295 Pages", "Unread");
-addBookToLibrary("The Hobbit", " J.R.R. Tolkien", "295 Pages", "Unread");
+addBookToLibrary("Harry Potter", "Jk Rowling", "321 Pages", "Unread");
 
 document
   .getElementById("add-book-button")
